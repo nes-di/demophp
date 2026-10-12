@@ -1,8 +1,10 @@
 <?php
 $maVariableTitre = "Ma Demo PHP";
-$maVariableNomTache = "Mon nom de tache";
-$maVariableDifficulteTache = "Ma description de tache";
-$maVariableTempsTache = "Mon temps de tache";
+$maVariableNomTache = "Nom de tache";
+$maVariableDifficulteTache = "Difficulté de tache";
+$maVariableTacheFinie = "Tache finie";
+$maVariableTacheFinie = false;
+
 ?>
 
 
@@ -20,8 +22,11 @@ $maVariableTempsTache = "Mon temps de tache";
 
     <main>
         <p><?= $maVariableNomTache; ?></p>
-        <p><?= $maVariableDifficulteTache; ?></p>
-        <p><?= $maVariableTempsTache; ?></p>    
+        <p><?= $maVariableDifficulteTache; ?></p> 
+        <p><?php if ($maVariableTacheFinie) {
+            echo "La tache est finie";} 
+            else {
+                echo "La tache n'est pas finie";} ?></p>
     </main>
 
     <footer>
