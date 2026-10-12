@@ -36,6 +36,9 @@ $taches = [
         "finie" => true
     ],
 ];
+function compter_taches($taches) {
+    return "Nombre de taches: " . count($taches) . "<br>" . "Nombre de taches finies: " . array_sum(array_column($taches, 'finie'));
+}
 ?>
 
 
@@ -52,8 +55,7 @@ $taches = [
     </header>
 
     <main>
-        <h2>"Nombre de taches": <?= count($taches) ?></h2>
-        <h2>"Nombre de taches finies": <?= array_sum(array_column($taches, 'finie')) ?></h2> 
+        <p><?= compter_taches($taches); ?></p>
         <?php foreach ($taches as $tache) { ?>
             <div>
                 <h2><?= $tache["nom"]; ?></h2>
